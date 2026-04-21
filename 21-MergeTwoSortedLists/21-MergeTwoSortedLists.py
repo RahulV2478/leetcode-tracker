@@ -1,4 +1,4 @@
-# Last updated: 4/21/2026, 6:01:45 PM
+# Last updated: 4/21/2026, 6:01:56 PM
 1# Definition for singly-linked list.
 2# class ListNode:
 3#     def __init__(self, val=0, next=None):
@@ -9,20 +9,19 @@
 8        head = ListNode(0, None)
 9        curr = head
 10        while list1 and list2:
-11            print(list1.val)
-12            print(list2.val)
-13            if list1.val <= list2.val:
-14                curr.next = list1
-15                list1 = list1.next
-16                
-17            else:
-18                curr.next =  list2
-19                list2 = list2.next
-20            curr = curr.next
-21        
-22        if(list1):
-23            curr.next = list1
-24        elif(list2):
-25            curr.next = list2
-26        return head.next
-27                
+11 
+12            if list1.val <= list2.val:
+13                curr.next = list1
+14                list1 = list1.next
+15                
+16            else:
+17                curr.next =  list2
+18                list2 = list2.next
+19            curr = curr.next
+20        
+21        if(list1):
+22            curr.next = list1
+23        elif(list2):
+24            curr.next = list2
+25        return head.next
+26                
