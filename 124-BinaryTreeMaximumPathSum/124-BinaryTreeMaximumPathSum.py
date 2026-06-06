@@ -1,4 +1,4 @@
-# Last updated: 6/5/2026, 9:05:54 PM
+# Last updated: 6/5/2026, 9:05:59 PM
 1# Definition for a binary tree node.
 2# class TreeNode:
 3#     def __init__(self, val=0, left=None, right=None):
@@ -20,11 +20,10 @@
 19            top = left + right + root.val
 20
 21            max_val[0] = max(top, max_val[0])
-22            print(max_val)
-23            continued = max(left, right) + root.val
-24
-25            return continued
-26        traverse(root, max_val)
-27        return max_val[0]
+22            continued = max(left, right) + root.val
+23
+24            return continued
+25        traverse(root, max_val)
+26        return max_val[0]
+27
 28
-29
