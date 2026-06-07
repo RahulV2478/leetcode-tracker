@@ -1,4 +1,4 @@
-# Last updated: 6/7/2026, 6:12:19 PM
+# Last updated: 6/7/2026, 6:14:29 PM
 1# Definition for a binary tree node.
 2# class TreeNode:
 3#     def __init__(self, val=0, left=None, right=None):
@@ -7,19 +7,17 @@
 6#         self.right = right
 7class Solution:
 8    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-9        max_diameter = [0]
-10
-11        def traverse(root):
-12            if root is None:
-13                return 0
-14            
-15            left = traverse(root.left)
-16            right = traverse(root.right)
-17
-18            max_diameter[0] = max(left + right, max_diameter[0])
-19
-20            return 1 + max(left, right)
-21        
-22        traverse(root)
-23
-24        return max_diameter[0]
+9
+10        def traverse(root):
+11            if root is None:
+12                return 0, 0
+13            
+14            left, left_diameter = traverse(root.left)
+15            right, right_diameter = traverse(root.right)
+16
+17            max_diameter = max(left + right, left_diameter, right_diameter)
+18
+19            return (1 + max(left, right)), max_diameter
+20        
+21        return traverse(root)[1]
+22
