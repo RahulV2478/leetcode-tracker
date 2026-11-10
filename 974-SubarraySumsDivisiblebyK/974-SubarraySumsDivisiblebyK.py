@@ -1,4 +1,4 @@
-# Last updated: 11/10/2026, 4:19:58 AM
+# Last updated: 11/10/2026, 4:20:03 AM
 1class Solution:
 2    def subarraysDivByK(self, nums: list[int], k: int) -> int:
 3        count = [0] * k
