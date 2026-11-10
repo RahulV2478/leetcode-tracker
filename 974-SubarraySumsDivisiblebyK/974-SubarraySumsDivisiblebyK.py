@@ -1,4 +1,4 @@
-# Last updated: 11/10/2026, 4:19:29 AM
+# Last updated: 11/10/2026, 4:19:40 AM
 1class Solution:
 2    def subarraysDivByK(self, nums: list[int], k: int) -> int:
 3        count = [0] * k
@@ -24,12 +24,11 @@
 23            prefix.append(mod)
 24            count[mod] += 1
 25        
-26        print(count)
-27        for i in range(len(count)):
-28           if count[i] > 1:
-29               
-30                counter += (count[i] * (count[i] - 1) // 2)
-31            
-32        
-33               
-34        return counter
+26        for i in range(len(count)):
+27           if count[i] > 1:
+28               
+29                counter += (count[i] * (count[i] - 1) // 2)
+30            
+31        
+32               
+33        return counter
