@@ -1,4 +1,4 @@
-# Last updated: 11/10/2026, 4:19:40 AM
+# Last updated: 11/10/2026, 4:19:58 AM
 1class Solution:
 2    def subarraysDivByK(self, nums: list[int], k: int) -> int:
 3        count = [0] * k
@@ -6,29 +6,18 @@
 5        s = 0
 6        prefix = []
 7        count[0] = 1
-8        def get_fibonacci_number(n):
-9            if n == 0:
-10                return 0
-11            elif n == 1:
-12                return 1
-13
-14            a, b = 0, 1
-15            for _ in range(2, n + 1):
-16                a, b = b, a + b  # Update 'a' and 'b' to move to the next pair
-17
-18            return b
-19
-20        for num in nums:
-21            s += num
-22            mod = s % k
-23            prefix.append(mod)
-24            count[mod] += 1
-25        
-26        for i in range(len(count)):
-27           if count[i] > 1:
-28               
-29                counter += (count[i] * (count[i] - 1) // 2)
-30            
-31        
-32               
-33        return counter
+8        
+9        for num in nums:
+10            s += num
+11            mod = s % k
+12            prefix.append(mod)
+13            count[mod] += 1
+14        
+15        for i in range(len(count)):
+16           if count[i] > 1:
+17               
+18                counter += (count[i] * (count[i] - 1) // 2)
+19            
+20        
+21               
+22        return counter
