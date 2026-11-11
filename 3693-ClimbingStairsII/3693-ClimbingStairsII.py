@@ -1,4 +1,4 @@
-# Last updated: 11/10/2026, 11:56:14 PM
+# Last updated: 11/11/2026, 2:21:35 AM
 1class Solution:
 2    def climbStairs(self, n: int, costs: List[int]) -> int:
 3        if n == 0:
